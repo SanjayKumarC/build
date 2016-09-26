@@ -38,40 +38,7 @@
                 <target>1.7</target>
             </configuration>
         </plugin>
-             <plugin>
-            <artifactId>maven-antrun-plugin</artifactId>
-            <version>1.7</version>
-            <executions>
-                <execution>
-                    <phase>process-test-resources</phase>
-                    <configuration>
-                        <target>
-                            <!-- maven does not support defining more than one target... -->
-                            <!-- https://jira.codehaus.org/browse/MANTRUN-86 -->
-                            <ant antfile="${basedir}/unzip.xml" />
-                        </target>
-                    </configuration>
-                    <goals>
-                        <goal>run</goal>
-                    </goals>
-                </execution>
-            </executions>
-            <dependencies>
-                <dependency>
-                    <groupId>ant-contrib</groupId>
-                    <artifactId>ant-contrib</artifactId>
-                    <version>1.0b3</version>
-                    <exclusions>
-                        <exclusion>
-                            <artifactId>ant</artifactId>
-                            <groupId>ant</groupId>
-                        </exclusion>
-                    </exclusions>
-                </dependency>
-            </dependencies>
-            <configuration>
-            </configuration>
-        </plugin>
+             
     </plugins>
 </build>
 
